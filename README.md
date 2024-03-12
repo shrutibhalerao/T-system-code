@@ -11,3 +11,9 @@ docker build -t fastapi_app
 
 Run the Docker container:
 docker run -d -p 8000:8000 fastapi_app
+
+
+
+We can call rest api using below:
+
+curl --location --request POST "http://fastapi-service.app1.svc.cluster.local"
