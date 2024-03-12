@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fastapi-app
+  namespace:app1
   labels:
     app: fastapi
 spec:
@@ -16,6 +17,16 @@ spec:
     spec:
       containers:
       - name: fastapi-app
-        image: <docker_image:0.0.1>  # Replace with the name of your Docker image
+        image: container-registry.com/docker_image/bookstore_app:0.0.1>  
         ports:
         - containerPort: 8000  # Ensure this matches the port your FastAPI app is running on
+        imagePullPolicy:Always
+        Command:
+           - ["uvicorn", "main.py", "--host", "0.0.0.0", "--port", "8000"]
+        resources:
+            requests:
+                cpu: 1m
+                memory:128M
+            limits:
+                cpu: 4
+                memory: 2Gi
