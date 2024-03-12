@@ -7,7 +7,7 @@ metadata:
      app: fastapi-app
      
 spec:
-  type: ClusterIP
+  type: ClusterIP  #type load balancer can be use to acceess application externally.
   ports:
     - port: 80
       targetPort: 5432
