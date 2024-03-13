@@ -39,10 +39,10 @@ To expose services externally load balancer service type can be used.
 We can call rest api using below ex command:
 curl --location --request POST "http://fastapi-service.app1.svc.cluster.local"
 
-we can run above setup on AKS cluster also on Rancher which gives kubernetes cluster to use locally.
+We can run above setup on AKS cluster also on Rancher which gives kubernetes cluster to use locally.
 kubectl can be installed to run AKS commands.
 AKS resource can be created using IAC terraform pipeline.
-uami and SPN access can be given to run resources as well as to access pods,namespaces etc if within private network.
+Uami and SPN access can be given to run resources as well as to access pods,namespaces etc if within private network.
 We can discuss further on it so that I can explain.
 Thanks.
 
