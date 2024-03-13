@@ -19,7 +19,7 @@ spec:
       - name: fastapi-app
         image: container-registry.com/docker_image/bookstore_app:0.0.1>  
         ports:
-        - containerPort: 8000  # Ensure this matches the port your FastAPI app is running on
+        - containerPort: 8000  
         imagePullPolicy:Always
         Command:
            - ["Python", "main.py"]
