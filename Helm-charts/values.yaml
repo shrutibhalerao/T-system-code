@@ -18,7 +18,6 @@ resources:
 
 service:
   name: fastapi-service
-  namespace: app1
   labels:
     app: fastapi-app
   type: ClusterIP
