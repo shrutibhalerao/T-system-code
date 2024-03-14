@@ -1,5 +1,5 @@
 replicaCount: 2
-namespace: test
+namespace: app1
 image:
   repository: container-registry.com/docker_image/bookstore_app
   tag: "0.0.1"
@@ -15,3 +15,13 @@ resources:
   requests:
     cpu: "1m"
     memory: "128M"
+
+service:
+  name: fastapi-service
+  namespace: app1
+  labels:
+    app: fastapi-app
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 5432
