@@ -43,6 +43,8 @@ We can run above setup on AKS cluster also on Rancher which gives kubernetes clu
 kubectl can be installed to run AKS commands.
 AKS resource can be created using IAC terraform pipeline.
 Uami and SPN access can be given to run resources as well as to access pods,namespaces etc if within private network.
+I tried to create Helm chart to have adjustable parameter for all environments.
+As we are deploying API so can create endpoints that allow to  interact/view and edit data backend data. 
 We can discuss further on it so that I can explain.
 Thanks.
 
